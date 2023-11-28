@@ -20,6 +20,8 @@ export const BLUE = '#BCE2E6';
 export const WHITE = '#FFFFFF';
 export const BLACK = '#000000';
 export const TRANSPARENT = 'transparent';
+export const BACKGROUND_GRAY= "#FAFAFA";
+
 
 
 export const Colors = {
@@ -35,8 +37,9 @@ export const Colors = {
   WARNING: 'orange',
   TEXT_GRAY: "#828282",
   GRAY: "#666666",
-  BACKGROUND_GRAY: "#EAEAEA",
+  BACKGROUND_GRAY: "#FAFAFA",
   BTN_GRAY: "#555555",
+  BTN_BUTTON: "#4B2C20",
   UNDERLINE: "#88888890",
   PRIMARY_GRAY: "#C4C4C4",
   PRIMARY_RED: "#FD0000",
