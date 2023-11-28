@@ -5,6 +5,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 // import DropdownAlert from "react-native-dropdownalert";
 
 import Pager from "./screens/onboarding";
+import Register from "./screens/signup";
 
 // import {setDropDown, setNavigator} from "../utils/NavigationRef";
 // import {useDispatch, useSelector} from "react-redux";
@@ -73,7 +74,8 @@ const AppNavigator = () => (
         // ref={(navigator) => 
         // setNavigator(navigator)}
         >
-            <Pager />
+            {/* <Pager /> */}
+            <Register />
         </NavigationContainer>
         {/* <DropdownAlert ref={setDropDown}/> */}
     </>
