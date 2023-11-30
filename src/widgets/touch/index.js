@@ -14,14 +14,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#4B2C20',
     paddingLeft: 30,
     paddingRight: 30,
-    paddingTop: 15,
-    paddingBottom: 15,
+    paddingTop: 12,
+    paddingBottom: 10,
     borderRadius: 10,
+    marginBottom: 20,
+    marginTop: 20,
+    height: 45
   },
   buttonText: {
     color: 'white',
     fontSize: 16,
-    fontWeight: '600'
+    fontWeight: '600',
+    alignSelf: 'center'
   },
 });
 

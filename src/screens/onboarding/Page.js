@@ -38,7 +38,7 @@ const Page = ({index, message, next, skip, title, }) => {
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 50, marginLeft: '5%', marginRight: '5%'}} >
             <Image source={beans[index]} />
-            <Touch title='NEXT' onPress={() => next(index)} style={{backgroundColor: '#4B2C20', paddingTop: 15 }} />
+            <Touch title='NEXT' onPress={() => next(index)} style={{backgroundColor: '#4B2C20', }} />
         </View>
       </View>
       
