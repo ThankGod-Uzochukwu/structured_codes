@@ -6,6 +6,7 @@ import {createStackNavigator} from "@react-navigation/stack";
 
 import Pager from "./screens/onboarding";
 import Register from "./screens/signup";
+import FaceID from "./screens/faceid";
 
 // import {setDropDown, setNavigator} from "../utils/NavigationRef";
 // import {useDispatch, useSelector} from "react-redux";
@@ -71,11 +72,18 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <>
         <NavigationContainer 
+        screenOptions={{ headerShown: false }}
         // ref={(navigator) => 
         // setNavigator(navigator)}
         >
             {/* <Pager /> */}
-            <Register />
+            {/* <Register /> */}
+            {/* <FaceID /> */}
+
+      <Stack.Navigator initialRouteName="Pager" screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="FaceID" component={FaceID} />
+      </Stack.Navigator>
         </NavigationContainer>
         {/* <DropdownAlert ref={setDropDown}/> */}
     </>
