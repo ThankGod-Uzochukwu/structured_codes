@@ -112,7 +112,7 @@ const Register = ({navigation}) => {
                 <View>
                     <Touch title='REGISTER' onPress={() => navigation.navigate('FaceID')}  />
                     <Text style={{alignSelf: 'center', color: '#5E5858D4'}}>Already have an account?</Text>
-                    <Touch title='SIGN IN' />
+                    <Touch onPress={() => navigation.navigate('Login')} title='SIGN IN' />
                 </View>
 
             </KeyboardAvoidingView>
