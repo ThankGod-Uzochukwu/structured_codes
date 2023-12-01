@@ -11,7 +11,7 @@ import * as LocalAuthentication from 'expo-local-authentication';
 
 const { height: deviceHeight } = Dimensions.get('window');
 
-const FaceID = () => {
+const FaceID = ({navigation}) => {
 
 
     const [isFaceIdEnabled, setIsFaceIdEnabled] = useState(false);
@@ -24,20 +24,20 @@ const FaceID = () => {
 
       if (success) {
         // FaceID authentication successful, you can update your state or perform other actions here
-        setIsFaceIdEnabled(true);
-      }
+        setIsFaceIdEnabled(true && navigation.navigate('Main'));
+      } 
     } catch (error) {
       console.error('FaceID authentication error:', error);
     }
   };
 
 
-  useEffect(() =>{
-    async function authenticate() {
-        const result = await LocalAuthentication.authenticateAsync();
-    }
-    authenticate();
-  }, []);
+//   useEffect(() =>{
+//     async function authenticate() {
+//         const result = await LocalAuthentication.authenticateAsync();
+//     }
+//     authenticate();
+//   }, []);
 
 
   return (
@@ -71,11 +71,11 @@ const FaceID = () => {
             />
             <View style={{ marginBottom: '10%'}}>
                 <Text style={{ fontSize: 28, alignSelf: 'center'}}>Want to enable faceID?</Text>
-                <Text style={{ fontSize: 16, alignSelf: 'center'}}>This helps you login quicker!</Text>
+                <Text style={{ fontSize: 16, alignSelf: 'center', marginTop: 20, marginBottom: -20}}>This helps you login quicker!</Text>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
                 <Touch title='Yes' onPress={enableFaceID} />
-                <Touch title='No' />
+                <Touch title='No' onPress={() => navigation.navigate('Login')}/>
             </View>
 
         </View>
