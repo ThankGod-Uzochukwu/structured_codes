@@ -83,7 +83,7 @@ const AppNavigator = () => (
             {/* <FaceID /> */}
 
       <Stack.Navigator initialRouteName="Pager" screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Pager" component={Pager} />
         <Stack.Screen name="FaceID" component={FaceID} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Main" component={Main} />
