@@ -1,10 +1,18 @@
-import App from './slices/AppReducer'
+import { createStore } from "redux";
 
-import {configureStore} from '@reduxjs/toolkit'
+const reducerFn = ( state = {counter: 0}, action) => {
 
-const store = configureStore({
-    reducer: {App}, middleware: (getDefaultMiddleware) => getDefaultMiddleware({serializableCheck: false,}),
-})
+    if (action.type === "INC") {
+        return {counter:state.counter + 1}
+    }
 
+    if (action.type === "DEC") {
+        return {counter:state.counter - 2}
+    }
 
-export default store;
+    return state;
+}
+
+const store = createStore(reducerFn)
+
+export default store

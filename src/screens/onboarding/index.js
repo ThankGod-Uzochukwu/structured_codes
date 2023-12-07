@@ -30,12 +30,12 @@ const pageDetails = [
 ]
 
 const Pager = () => {
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const page = useRef(null)
     
-    // const skipPage = () => dispatch()
-    const skipPage = a => page?.current?.setPage(a + 3)
+    const skipPage = () => dispatch()
+    // const skipPage = a => page?.current?.setPage(a - 3)
     const next = a => page?.current?.setPage(a + 1)
 
   return (
