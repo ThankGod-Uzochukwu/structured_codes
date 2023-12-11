@@ -5,6 +5,7 @@ import Cart from '../screens/cart'
 import {useNavigation} from "@react-navigation/native";
 import {useDispatch} from "react-redux";
 import {CommonActions} from "@react-navigation/native";
+import SideDrawer from './Drawer';
 
 
 
@@ -26,7 +27,9 @@ const Sidebar = ({}) => {
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>
 
       <TouchableOpacity onPress={navigation.closeDrawer}>
-        <FontAwesome name="navicon" size={30} color="black" />
+        <SideDrawer>
+            <FontAwesome name="navicon" size={30} color="black" />
+        </SideDrawer>
       </TouchableOpacity>
       
       <Image 
