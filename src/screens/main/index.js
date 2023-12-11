@@ -1,11 +1,13 @@
 import { View, Text, SafeAreaView } from 'react-native'
 import React from 'react'
-import Sidebar from '../../partials/Sidebar'
+import SideDrawer from '../../partials/Drawer'
+// import Sidebar from '../../partials/SideBar'
 
 const Home = () => {
   return (
     <SafeAreaView>
-      <Sidebar />
+      {/* <SideDrawer /> */}
+      {/* <Sidebar /> */}
     </SafeAreaView>
   )
 }

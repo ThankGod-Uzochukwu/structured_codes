@@ -3,15 +3,15 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import DropdownAlert from "react-native-dropdownalert";
-import {setDropDown, setNavigator} from "../utils/NavigationRef";
+
+// import {setDropDown, setNavigator} from "../utils/NavigationRef";
 import {useDispatch, useSelector} from "react-redux";
-import Pager from "./pagers";
-import LoginScreen from "./login";
-import Registration from "./signup";
-import TermsScreen from "./terms";
-import ForgotPasswordScreen from "./forgot";
+import Pager from "./onboarding/index";
+import Login from "./login/index"
+import Register from "./signup/index"
+
 import SideBar from "../partials/Sidebar";
-import {DWR, setDispatch} from "../utils/helper";
+// import {DWR, setDispatch} from "../utils/helper";
 import {TabStack} from "./RouteConstants";
 
 const Stack = createStackNavigator();
@@ -39,24 +39,23 @@ const ScreenStack = () => {
     //     setDispatch(dispatch)
     // }, [])
     // if (firstTimeUser === "yes") {
-    //     return (
-    //         <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Pager">
-    //             <Stack.Screen name="Pager" component={Pager}/>
-    //         </Stack.Navigator>
-    //     );
-    // }
+        return (
+            <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Pager">
+                <Stack.Screen name="Pager" component={Pager}/>
+            </Stack.Navigator>
+        );
+  //  }
     // if (!isLoggedIn) {
-    //     return (
-    //         <Stack.Navigator
-    //             screenOptions={{headerShown: false}}
-    //             initialRouteName="Login"
-    //         >
-    //             <Stack.Screen name="Login" component={LoginScreen}/>
-    //             <Stack.Screen name="Forgot" component={ForgotPasswordScreen}/>
-    //             <Stack.Screen name="Registration" component={Registration}/>
-    //         </Stack.Navigator>
-    //     );
-    // }
+        return (
+            <Stack.Navigator
+                screenOptions={{headerShown: false}}
+                initialRouteName="Login"
+            >
+                <Stack.Screen name="Login" component={Login}/>
+                <Stack.Screen name="Register" component={Register}/>
+            </Stack.Navigator>
+        );
+ //   }
 
     return (<Dashboard/>
     );
